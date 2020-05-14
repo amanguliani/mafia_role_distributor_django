@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ready to Play?</title>
+</head>
+<body>
+<form action='new_game' method="POST">
+    {% csrf_token %}
+    <span>Raja Mantri Chor Sipai</span>
+    <button type='submit' name="Submit">Create a new Game?</button>
+</form>
+</body>
+</html>

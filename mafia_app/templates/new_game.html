@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a new Game</title>
+</head>
+<body>
+{% if created %}
+    <h2>Game has been created, here are the details</h2>
+    {% for player_link in players_link_list %}
+        <a href={{player_link}}>{{player_link}}</a><br>
+    {% endfor %}
+{% else %}
+    <h2>Enter Player Details</h2>
+    <form method="POST"> {% csrf_token %}
+        {{ form }}
+        <input type="submit" name="Create" value="Submit" />
+    </form>
+{% endif %}
+
+</body>
+</html>

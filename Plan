@@ -1,0 +1,43 @@
+# What is being built
+Without Channels - Role Generator
+
+# Flow
+## Screen 1 (/mafia)
+    Pick a Game:
+    Raja Mantri Chor Sipai (MVP)
+    or
+    Mafia
+
+## Screen 2(/mafia/play)
+Create a new Game
+or
+Enter Game Id: []
+
+
+## Screen 3a (/mafia/play/create)
+Enter Player Names
+Enter Player Names
+Enter Player Names
+Enter Player Names
+
+Create Game
+
+Player Name Link
+Player Name Link
+Player Name Link
+Player Name Link
+
+## Screen 3b (/mafia/play/{GameId+Name})
+Card View with Role.
+
+
+# Logic
+Whenever a new game is created - Create a new Id and random the order of writing roles.
+Then pick the next one for Id and PlayerName empty and write to it.
+
+Lock on Database - consecutive writes can be done.
+
+# Database Table
+GameName
+PersonName
+Role
